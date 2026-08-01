@@ -17,6 +17,7 @@ class Settings(BaseSettings):
 
     # CORS
     cors_origins: str = "http://localhost:5173,http://localhost:3000"
+    cors_origin_regex: str | None = r"https://.*\.vercel\.app"
 
     # App
     app_env: str = "development"
