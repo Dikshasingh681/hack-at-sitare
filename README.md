@@ -1,4 +1,4 @@
-# CursorPM — AI Product Manager Copilot
+# CursorPM :- AI Product Manager Copilot
 
 CursorPM turns a raw JSON export of customer reviews or product feedback into
 a prioritized, engineering-ready backlog. Upload a feedback file, click
