@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply font-body text-slate-800 dark:text-slate-100 transition-colors duration-200;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+  ::selection {
+    @apply bg-brand-300/50;
+  }
+  *:focus-visible {
+    outline: 2px solid #4d7dff;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-[#141a2e] border border-slate-200/70 dark:border-white/5 rounded-2xl shadow-card;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold
+      transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-brand-500 text-white hover:bg-brand-600 shadow-[0_4px_14px_-4px_rgba(41,85,245,0.6)];
+  }
+  .btn-secondary {
+    @apply btn bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-white/10;
+  }
+  .btn-ghost {
+    @apply btn text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5;
+  }
+
+  .skeleton {
+    @apply bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 dark:from-white/5 dark:via-white/10 dark:to-white/5
+      bg-[length:800px_100%] animate-shimmer rounded-lg;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold tracking-wide;
+  }
+}
